@@ -1,0 +1,3 @@
+Filled container:
+Container contains 1 elements.
+0: It is a object oriented language: TIOBI = 90.000000. Year of creation = 2020 . Years divide count letters in the name = 144.000000. Inheritance = Interface

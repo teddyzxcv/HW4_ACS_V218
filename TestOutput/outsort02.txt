@@ -1,0 +1,8 @@
+Sorted container!
+Container contains 6 elements.
+0: It is a functional language: TIOBI = 93.0. Year of creation = 2001. Years divide count letters in the name = 200.1. Type = FunctionalTypes.static. Is lazy calculation support = Yes.
+1: It is a procedural language: TIOBI = 84.0. Year of creation = 1909. Years divide count letters in the name = 190.9. Is abstract type exist = Yes.
+2: It is a object oriented language: TIOBI = 3.0. Year of creation = 2011. Years divide count letters in the name = 143.64285714285714. Inheritance = ObjectOrientedInheritance.multiple.
+3: It is a object oriented language: TIOBI = 92.0. Year of creation = 2010. Years divide count letters in the name = 143.57142857142858. Inheritance = ObjectOrientedInheritance.multiple.
+4: It is a object oriented language: TIOBI = 87.0. Year of creation = 1979. Years divide count letters in the name = 141.35714285714286. Inheritance = ObjectOrientedInheritance.single.
+5: It is a functional language: TIOBI = 99.0. Year of creation = 201. Years divide count letters in the name = 20.1. Type = FunctionalTypes.static. Is lazy calculation support = Yes.

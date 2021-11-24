@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/HW4_ACS_V218.dir/main.c.o CMakeFiles/HW4_ACS_V218.dir/input.c.o CMakeFiles/HW4_ACS_V218.dir/inrnd.c.o CMakeFiles/HW4_ACS_V218.dir/output.c.o -o HW4_ACS_V218 

@@ -1,0 +1,15 @@
+Sorted container!
+Container contains 13 elements.
+0: It is a functional language: TIOBI = 23.0. Year of creation = 2001. Years divide count letters in the name = 200.1. Type = FunctionalTypes.static. Is lazy calculation support = Yes.
+1: It is a functional language: TIOBI = 59.0. Year of creation = 2001. Years divide count letters in the name = 200.1. Type = FunctionalTypes.static. Is lazy calculation support = Yes.
+2: It is a functional language: TIOBI = 73.0. Year of creation = 2001. Years divide count letters in the name = 200.1. Type = FunctionalTypes.static. Is lazy calculation support = Yes.
+3: It is a functional language: TIOBI = 99.0. Year of creation = 2001. Years divide count letters in the name = 200.1. Type = FunctionalTypes.static. Is lazy calculation support = Yes.
+4: It is a procedural language: TIOBI = 68.0. Year of creation = 1999. Years divide count letters in the name = 199.9. Is abstract type exist = Yes.
+5: It is a procedural language: TIOBI = 101.0. Year of creation = 1909. Years divide count letters in the name = 190.9. Is abstract type exist = Yes.
+6: It is a object oriented language: TIOBI = 60.0. Year of creation = 2020. Years divide count letters in the name = 144.28571428571428. Inheritance = ObjectOrientedInheritance.interface.
+7: It is a object oriented language: TIOBI = 88.0. Year of creation = 2011. Years divide count letters in the name = 143.64285714285714. Inheritance = ObjectOrientedInheritance.multiple.
+8: It is a object oriented language: TIOBI = 33.0. Year of creation = 2011. Years divide count letters in the name = 143.64285714285714. Inheritance = ObjectOrientedInheritance.multiple.
+9: It is a object oriented language: TIOBI = 2.0. Year of creation = 2010. Years divide count letters in the name = 143.57142857142858. Inheritance = ObjectOrientedInheritance.multiple.
+10: It is a object oriented language: TIOBI = 47.0. Year of creation = 1979. Years divide count letters in the name = 141.35714285714286. Inheritance = ObjectOrientedInheritance.single.
+11: It is a object oriented language: TIOBI = 89.0. Year of creation = 1979. Years divide count letters in the name = 141.35714285714286. Inheritance = ObjectOrientedInheritance.single.
+12: It is a functional language: TIOBI = 1.0. Year of creation = 201. Years divide count letters in the name = 20.1. Type = FunctionalTypes.static. Is lazy calculation support = Yes.
