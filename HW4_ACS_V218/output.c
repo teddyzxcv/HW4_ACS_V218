@@ -8,10 +8,8 @@
 
 //------------------------------------------------------------------------------
 // Вычисление частное от деления года создания на количество символов в названии в функциональный язык
-double YearsDivideLettersFunctional(void *func) {
-    int years = *((int *) (func + doubleSize));
-    return (double) years / (double) 10;
-}
+double YearsDivideLettersFunctional(void *func);
+
 
 // Вывод параметров функциональный язык в файл
 void OutFunctional(void *func, FILE *f) {
@@ -25,10 +23,7 @@ void OutFunctional(void *func, FILE *f) {
 
 //------------------------------------------------------------------------------
 // Вычисление частное от деления года создания на количество символов в названии в объект-ориентированный язык
-double YearsDivideLettersObjectOriented(void *ob) {
-    int years = *((int *) (ob + doubleSize));
-    return (double) years / (double) 14;
-}
+double YearsDivideLettersObjectOriented(void *ob);
 
 // Вывод параметров объект-ориентированный язык в файл
 void OutObjectOriented(void *ob, FILE *f) {
@@ -41,10 +36,7 @@ void OutObjectOriented(void *ob, FILE *f) {
 
 //------------------------------------------------------------------------------
 // Вычисление частное от деления года создания на количество символов в названии в процедурный язык
-double YearsDivideLettersProcedural(void *p) {
-    int years = *((int *) (p + doubleSize));
-    return (double) years / (double) 10;
-}
+double YearsDivideLettersProcedural(void *p);
 
 // Вывод параметров процедурный язык в файл
 void OutProcedural(void *p, FILE *f) {

@@ -1,0 +1,57 @@
+     1                                  extern PROCEDURAL
+     2                                  extern OBJECTORIENTED
+     3                                  extern FUNCTIONAL
+     4                                  
+     5                                  ;
+     6                                  ;;double YearsDivideLettersFunctional(void *func) {
+     7                                  ;;    int years = *((int *) (func + doubleSize));
+     8                                  ;;    return (double) years / (double) 10;
+     9                                  ;;}
+    10                                  
+    11                                  
+    12                                  global YearsDivideLettersFunctional
+    13                                  YearsDivideLettersFunctional:
+    14                                  section .text
+    15 00000000 55                      push rbp
+    16 00000001 4889E5                  mov rbp, rsp
+    17                                  
+    18                                      ; В rdi адрес прямоугольника
+    19 00000004 8B4708                      mov eax, [rdi+8]
+    20 00000007 BA00000000                  mov edx, 0
+    21 0000000C B90A000000                  mov ecx, 10
+    22 00000011 F7F1                        div ecx
+    23 00000013 F20F2AC0                    cvtsi2sd    xmm0, eax
+    24                                  
+    25 00000017 C9                      leave
+    26 00000018 C3                      ret
+    27                                  
+    28                                  global YearsDivideLettersObjectOriented
+    29                                  YearsDivideLettersObjectOriented:
+    30                                  section .text
+    31 00000019 55                      push rbp
+    32 0000001A 4889E5                  mov rbp, rsp
+    33                                  
+    34                                      ; В rdi адрес прямоугольника
+    35 0000001D 8B4708                      mov eax, [rdi+8]
+    36 00000020 BA00000000                  mov edx, 0
+    37 00000025 B90E000000                  mov ecx, 14
+    38 0000002A F7F1                        div ecx
+    39 0000002C F20F2AC0                    cvtsi2sd    xmm0, eax
+    40                                  
+    41 00000030 C9                      leave
+    42 00000031 C3                      ret
+    43                                  
+    44                                  global YearsDivideLettersProcedural
+    45                                  YearsDivideLettersProcedural:
+    46                                  section .text
+    47 00000032 55                      push rbp
+    48 00000033 4889E5                  mov rbp, rsp
+    49                                  
+    50                                      ; В rdi адрес прямоугольника
+    51 00000036 8B4708                      mov eax, [rdi+8]
+    52 00000039 BA00000000                  mov edx, 0
+    53 0000003E B90E000000                  mov ecx, 14
+    54 00000043 F7F1                        div ecx
+    55 00000045 F20F2AC0                    cvtsi2sd    xmm0, eax
+    56                                  
+    57 00000049 C9                      leave

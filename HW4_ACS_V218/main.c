@@ -14,7 +14,7 @@
 // #include "inrnd.c"
 // #include "perimeter.c"
 // #include "output.c"
-const char testroot[100] = "./../../TestInput/", resroot[100] = "./../../TestOutput/";
+const char testroot[100] = "./../TestInput/", resroot[100] = "./../TestOutput/";
 
 void errMessage1() {
     printf("incorrect command line!\n"
