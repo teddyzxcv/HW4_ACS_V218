@@ -8,93 +8,93 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug"/>
+				<Option working_dir="/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug"/>
+				<Option working_dir="/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug"/>
+				<Option working_dir="/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="HW4_ACS_V218">
-				<Option output="/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/HW4_ACS_V218" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug"/>
+				<Option output="/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/HW4_ACS_V218" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 HW4_ACS_V218"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 HW4_ACS_V218"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="HW4_ACS_V218/fast">
-				<Option output="/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/HW4_ACS_V218" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug"/>
+				<Option output="/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/HW4_ACS_V218" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 HW4_ACS_V218/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 HW4_ACS_V218/fast"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/data.h">
+		<Unit filename="/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/data.h">
 			<Option target="HW4_ACS_V218"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/extdata.h">
+		<Unit filename="/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/extdata.h">
 			<Option target="HW4_ACS_V218"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/input.c">
+		<Unit filename="/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/input.c">
 			<Option target="HW4_ACS_V218"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/inrnd.c">
+		<Unit filename="/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/inrnd.c">
 			<Option target="HW4_ACS_V218"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/main.c">
+		<Unit filename="/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/main.c">
 			<Option target="HW4_ACS_V218"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/output.c">
+		<Unit filename="/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/output.c">
 			<Option target="HW4_ACS_V218"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/CMakeLists.txt">
+		<Unit filename="/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

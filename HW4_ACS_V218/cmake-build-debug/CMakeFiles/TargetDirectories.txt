@@ -1,3 +1,3 @@
-/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/CMakeFiles/HW4_ACS_V218.dir
+/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/CMakeFiles/HW4_ACS_V218.dir

@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/input.c" "/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/CMakeFiles/HW4_ACS_V218.dir/input.c.o"
-  "/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/inrnd.c" "/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/CMakeFiles/HW4_ACS_V218.dir/inrnd.c.o"
-  "/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/main.c" "/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/CMakeFiles/HW4_ACS_V218.dir/main.c.o"
-  "/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/output.c" "/mnt/c/Users/pan26/Documents/GitHub/HW4_ACS_V218_ALL/HW4_ACS_V218/cmake-build-debug/CMakeFiles/HW4_ACS_V218.dir/output.c.o"
+  "/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/input.c" "/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/CMakeFiles/HW4_ACS_V218.dir/input.c.o"
+  "/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/inrnd.c" "/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/CMakeFiles/HW4_ACS_V218.dir/inrnd.c.o"
+  "/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/main.c" "/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/CMakeFiles/HW4_ACS_V218.dir/main.c.o"
+  "/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/output.c" "/Users/teddyzxcv/Documents/Github/HW4_ACS_V218/HW4_ACS_V218/cmake-build-debug/CMakeFiles/HW4_ACS_V218.dir/output.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH

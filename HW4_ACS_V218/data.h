@@ -32,7 +32,6 @@ int const OBJECTORIENTED = 2;
 // Константа, задающая признак функциональный язык
 int const FUNCTIONAL = 1;
 
-
 //------------------------------------------------------------------------------
 // Описание используемых функций
 //------------------------------------------------------------------------------
@@ -46,4 +45,6 @@ void InRndContainer(void *c, int *len, int size);
 // Вывод содержимого контейнера в файл
 void OutContainer(void *c, int len, FILE *f);
 
+// Сортировка.
+void BinaryInsertion(void *cont, int len);
 #endif //HW4_ACS_V218_DATA_H

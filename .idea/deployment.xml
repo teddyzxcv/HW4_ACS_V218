@@ -2,10 +2,10 @@
 <project version="4">
   <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="Remote Host (5f3c8ea5-d326-4f55-b103-204ff6efd45d)">
+      <paths name="Local Docker Remote (ca3f35e1-d233-4910-97cb-2b41f7fa13c9)">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/tmp/HW4_ACS_V218" local="$PROJECT_DIR$/HW4_ACS_V218" />
           </mappings>
         </serverdata>
       </paths>
