@@ -1,142 +1,287 @@
      1                                  extern PROCEDURAL
      2                                  extern OBJECTORIENTED
      3                                  extern FUNCTIONAL
-     4                                  
-     5                                  ;
-     6                                  ;;double YearsDivideLettersFunctional(void *func) {
-     7                                  ;;    int years = *((int *) (func + doubleSize));
-     8                                  ;;    return (double) years / (double) 10;
-     9                                  ;;}
-    10                                  
-    11                                  
-    12                                  global YearsDivideLettersFunctional
-    13                                  YearsDivideLettersFunctional:
-    14                                  section .text
-    15 00000000 55                      push rbp
-    16 00000001 4889E5                  mov rbp, rsp
-    17                                  
-    18                                      ; В rdi адрес прямоугольника
-    19 00000004 8B4708                      mov eax, [rdi+8]
-    20 00000007 BA00000000                  mov edx, 0
-    21 0000000C B90A000000                  mov ecx, 10
-    22 00000011 F7F1                        div ecx
-    23 00000013 F20F2AC0                    cvtsi2sd    xmm0, eax
-    24                                  
-    25 00000017 C9                      leave
-    26 00000018 C3                      ret
-    27                                  
-    28                                  global YearsDivideLettersObjectOriented
-    29                                  YearsDivideLettersObjectOriented:
-    30                                  section .text
-    31 00000019 55                      push rbp
-    32 0000001A 4889E5                  mov rbp, rsp
-    33                                  
-    34                                      ; В rdi адрес прямоугольника
-    35 0000001D 8B4708                      mov eax, [rdi+8]
-    36 00000020 BA00000000                  mov edx, 0
-    37 00000025 B90E000000                  mov ecx, 14
-    38 0000002A F7F1                        div ecx
-    39 0000002C F20F2AC0                    cvtsi2sd    xmm0, eax
-    40                                  
-    41 00000030 C9                      leave
-    42 00000031 C3                      ret
+     4                                  extern programminglanguageSize
+     5                                  extern memcpy
+     6                                  
+     7                                  global YearsDivideLetters
+     8                                  YearsDivideLetters:
+     9                                  section .text
+    10 00000000 55                      push rbp
+    11 00000001 4889E5                  mov rbp, rsp
+    12                                  
+    13                                      ; В rdi адрес фигуры
+    14 00000004 8B07                        mov eax, [rdi]
+    15 00000006 3B0425[00000000]            cmp eax, [FUNCTIONAL]
+    16 0000000D 741A                        je .functionalDivide
+    17 0000000F 3B0425[00000000]            cmp eax, [OBJECTORIENTED]
+    18 00000016 741C                        je .objectDivide
+    19 00000018 3B0425[00000000]            cmp eax, [PROCEDURAL]
+    20 0000001F 741E                        je .procedurallDivide
+    21 00000021 31C0                        xor eax, eax
+    22 00000023 F20F2AC0                    cvtsi2sd    xmm0, eax
+    23 00000027 EB1F                        jmp     .return
+    24                                  .functionalDivide:
+    25 00000029 4883C704                    add     rdi, 4
+    26 0000002D E818000000                  call    YearsDivideLettersFunctional
+    27 00000032 EB14                        jmp     .return
+    28                                  .objectDivide:
+    29 00000034 4883C704                    add     rdi, 4
+    30 00000038 E826000000                  call    YearsDivideLettersObjectOriented
+    31 0000003D EB09                        jmp     .return
+    32                                  .procedurallDivide:
+    33 0000003F 4883C704                    add     rdi, 4
+    34 00000043 E834000000                  call    YearsDivideLettersProcedural
+    35                                  .return:
+    36 00000048 C9                      leave
+    37 00000049 C3                      ret
+    38                                  ;
+    39                                  ;;double YearsDivideLettersFunctional(void *func) {
+    40                                  ;;    int years = *((int *) (func + doubleSize));
+    41                                  ;;    return (double) years / (double) 10;
+    42                                  ;;}
     43                                  
-    44                                  global YearsDivideLettersProcedural
-    45                                  YearsDivideLettersProcedural:
-    46                                  section .text
-    47 00000032 55                      push rbp
-    48 00000033 4889E5                  mov rbp, rsp
-    49                                  
-    50                                      ; В rdi адрес прямоугольника
-    51 00000036 8B4708                      mov eax, [rdi+8]
-    52 00000039 BA00000000                  mov edx, 0
-    53 0000003E B90E000000                  mov ecx, 14
-    54 00000043 F7F1                        div ecx
-    55 00000045 F20F2AC0                    cvtsi2sd    xmm0, eax
+    44                                  
+    45                                  global YearsDivideLettersFunctional
+    46                                  YearsDivideLettersFunctional:
+    47                                  section .text
+    48 0000004A 55                      push rbp
+    49 0000004B 4889E5                  mov rbp, rsp
+    50                                  
+    51 0000004E 8B4708                      mov eax, [rdi+8]
+    52 00000051 BA00000000                  mov edx, 0
+    53 00000056 B90A000000                  mov ecx, 10
+    54 0000005B F7F1                        div ecx
+    55 0000005D F20F2AC0                    cvtsi2sd    xmm0, eax
     56                                  
-    57 00000049 C9                      leave
-    58 0000004A C3                      ret
+    57 00000061 C9                      leave
+    58 00000062 C3                      ret
     59                                  
-    60                                  ; int BinarySearch(void *c, void *item, int low, int high)
-    61                                  ; {
-    62                                  ;     if (high <= low)
-    63                                  ;     {
-    64                                  ;         return (YearsDivideLetters(item) < YearsDivideLetters(c + low * programminglanguageSize)) ? (low + 1) : low;
-    65                                  ;     }
-    66                                  ;     int mid = (low + high) / 2;
-    67                                  ;     if (YearsDivideLetters(item) == YearsDivideLetters(c + programminglanguageSize * mid))
-    68                                  ;     {
-    69                                  ;         return mid + 1;
-    70                                  ;     }
-    71                                  ;     if (YearsDivideLetters(item) < YearsDivideLetters(c + programminglanguageSize * mid))
-    72                                  ;     {
-    73                                  ;         return BinarySearch(c, item, mid + 1, high);
-    74                                  ;     }
-    75                                  ;     return BinarySearch(c, item, low, mid - 1);
-    76                                  ; }
-    77                                  
-    78                                  ; global BinarySearch
-    79                                  ; BinarySearch:
-    80                                  ; section .text
-    81                                  ; push rbp
-    82                                  ; mov rbp, rsp
-    83                                  
-    84                                  ;     ; В rdi адрес прямоугольника
-    85                                  ;     mov eax, [rdi+8]
-    86                                  ;     mov edx, 0
-    87                                  ;     mov ecx, 14
-    88                                  ;     div ecx
-    89                                  ;     cvtsi2sd    xmm0, eax
-    90                                  
-    91                                  ; leave
-    92                                  ; ret
-    93                                  
-    94                                  ; double YearsDivideLetters(void *s)
-    95                                  ; {
-    96                                  ;     int k = *((int *)s);
-    97                                  ;     if (k == FUNCTIONAL)
-    98                                  ;     {
-    99                                  ;         return YearsDivideLettersFunctional(s + intSize);
-   100                                  ;     }
-   101                                  ;     else if (k == OBJECTORIENTED)
-   102                                  ;     {
-   103                                  ;         return YearsDivideLettersObjectOriented(s + intSize);
-   104                                  ;     }
-   105                                  ;     else if (k == PROCEDURAL)
-   106                                  ;     {
-   107                                  ;         return YearsDivideLettersProcedural(s + intSize);
-   108                                  ;     }
-   109                                  ;     return -1;
-   110                                  ; }
-   111                                  
-   112                                  global YearsDivideLetters
-   113                                  YearsDivideLetters:
-   114                                  section .text
-   115 0000004B 55                      push rbp
-   116 0000004C 4889E5                  mov rbp, rsp
-   117                                  
-   118                                      ; В rdi адрес фигуры
-   119 0000004F 8B07                        mov eax, [rdi]
-   120 00000051 3B0425[00000000]            cmp eax, [FUNCTIONAL]
-   121 00000058 741A                        je .functionalDivide
-   122 0000005A 3B0425[00000000]            cmp eax, [OBJECTORIENTED]
-   123 00000061 741C                        je .objectDivide
-   124 00000063 3B0425[00000000]            cmp eax, [PROCEDURAL]
-   125 0000006A 741E                        je .procedurallDivide
-   126 0000006C 31C0                        xor eax, eax
-   127 0000006E F20F2AC0                    cvtsi2sd    xmm0, eax
-   128 00000072 EB1F                        jmp     .return
-   129                                  .functionalDivide:
-   130 00000074 4883C704                    add     rdi, 4
-   131 00000078 E883FFFFFF                  call    YearsDivideLettersFunctional
-   132 0000007D EB14                        jmp     .return
-   133                                  .objectDivide:
-   134 0000007F 4883C704                    add     rdi, 4
-   135 00000083 E891FFFFFF                  call    YearsDivideLettersObjectOriented
-   136 00000088 EB09                        jmp     .return
-   137                                  .procedurallDivide:
-   138 0000008A 4883C704                    add     rdi, 4
-   139 0000008E E89FFFFFFF                  call    YearsDivideLettersProcedural
-   140                                  .return:
-   141 00000093 C9                      leave
-   142 00000094 C3                      ret
+    60                                  global YearsDivideLettersObjectOriented
+    61                                  YearsDivideLettersObjectOriented:
+    62                                  section .text
+    63 00000063 55                      push rbp
+    64 00000064 4889E5                  mov rbp, rsp
+    65                                  
+    66 00000067 8B4708                      mov eax, [rdi+8]
+    67 0000006A BA00000000                  mov edx, 0
+    68 0000006F B90E000000                  mov ecx, 14
+    69 00000074 F7F1                        div ecx
+    70 00000076 F20F2AC0                    cvtsi2sd    xmm0, eax
+    71                                  
+    72 0000007A C9                      leave
+    73 0000007B C3                      ret
+    74                                  
+    75                                  global YearsDivideLettersProcedural
+    76                                  YearsDivideLettersProcedural:
+    77                                  section .text
+    78 0000007C 55                      push rbp
+    79 0000007D 4889E5                  mov rbp, rsp
+    80                                  
+    81 00000080 8B4708                      mov eax, [rdi+8]
+    82 00000083 BA00000000                  mov edx, 0
+    83 00000088 B90A000000                  mov ecx, 10
+    84 0000008D F7F1                        div ecx
+    85 0000008F F20F2AC0                    cvtsi2sd    xmm0, eax
+    86                                  
+    87 00000093 C9                      leave
+    88 00000094 C3                      ret
+    89                                  
+    90                                  ; int BinarySearch(void *c, void *item, int low, int high)
+    91                                  ; {
+    92                                  ;     if (high <= low)
+    93                                  ;     {
+    94                                  ;         return (YearsDivideLetters(item) < YearsDivideLetters(c + low * programminglanguageSize)) ? (low + 1) : low;
+    95                                  ;     }
+    96                                  ;second_condition:
+    97                                  ;     int mid = (low + high) / 2;
+    98                                      ; if (YearsDivideLetters(item) == YearsDivideLetters(c + programminglanguageSize * mid))
+    99                                      ; {
+   100                                      ;     return mid + 1;
+   101                                      ; }
+   102                                  ;third_condition:
+   103                                      ; if (YearsDivideLetters(item) < YearsDivideLetters(c + programminglanguageSize * mid))
+   104                                      ; {
+   105                                      ;     return BinarySearch(c, item, mid + 1, high);
+   106                                      ; }
+   107                                      ; return BinarySearch(c, item, low, mid - 1);
+   108                                  ; }
+   109                                  
+   110                                  global BinarySearch
+   111                                  BinarySearch:
+   112                                  section .text
+   113 00000095 55                              push    rbp
+   114 00000096 4889E5                          mov     rbp, rsp
+   115 00000099 53                              push    rbx
+   116 0000009A 4883EC38                        sub     rsp, 56
+   117 0000009E 48897DD8                        mov     qword [rbp-40], rdi
+   118 000000A2 488975D0                        mov     qword [rbp-48], rsi
+   119 000000A6 8955CC                          mov     dword [rbp-52], edx
+   120 000000A9 894DC8                          mov     dword [rbp-56], ecx
+   121 000000AC 8B45C8                          mov     eax, dword [rbp-56]
+   122 000000AF 3B45CC                          cmp     eax, dword [rbp-52]
+   123 000000B2 7F42                            jg      .second_Condition
+   124 000000B4 488B45D0                        mov     rax, qword [rbp-48]
+   125 000000B8 4889C7                          mov     rdi, rax
+   126 000000BB E840FFFFFF                      call    YearsDivideLetters
+   127 000000C0 89C3                            mov     ebx, eax
+   128 000000C2 8B0425[00000000]                mov     eax, [programminglanguageSize]
+   129 000000C9 0FAF45CC                        imul    eax, dword [rbp-52]
+   130 000000CD 4863D0                          movsx   rdx, eax
+   131 000000D0 488B45D8                        mov     rax, qword [rbp-40]
+   132 000000D4 4801D0                          add     rax, rdx
+   133 000000D7 4889C7                          mov     rdi, rax
+   134 000000DA E821FFFFFF                      call    YearsDivideLetters
+   135 000000DF 39C3                            cmp     ebx, eax
+   136 000000E1 7D0B                            jge     .return_low
+   137 000000E3 8B45CC                          mov     eax, dword [rbp-52]
+   138 000000E6 83C001                          add     eax, 1
+   139 000000E9 E9C4000000                      jmp     .return
+   140                                  .return_low:
+   141 000000EE 8B45CC                          mov     eax, dword [rbp-52]
+   142 000000F1 E9BC000000                      jmp     .return
+   143                                  .second_Condition:
+   144 000000F6 8B55CC                          mov     edx, dword [rbp-52]
+   145 000000F9 8B45C8                          mov     eax, dword [rbp-56]
+   146 000000FC 01D0                            add     eax, edx
+   147 000000FE 89C2                            mov     edx, eax
+   148 00000100 C1EA1F                          shr     edx, 31
+   149 00000103 01D0                            add     eax, edx
+   150 00000105 BA00000000                      mov edx, 0
+   151 0000010A B902000000                      mov ecx, 2
+   152 0000010F F7F1                            div ecx
+   153 00000111 8945EC                          mov     dword [rbp-20], eax
+   154 00000114 488B45D0                        mov     rax, qword [rbp-48]
+   155 00000118 4889C7                          mov     rdi, rax
+   156 0000011B E8E0FEFFFF                      call    YearsDivideLetters
+   157 00000120 89C3                            mov     ebx, eax
+   158 00000122 8B0425[00000000]                mov     eax, dword [programminglanguageSize]
+   159 00000129 0FAF45EC                        imul    eax, dword [rbp-20]
+   160 0000012D 4863D0                          movsx   rdx, eax
+   161 00000130 488B45D8                        mov     rax, qword [rbp-40]
+   162 00000134 4801D0                          add     rax, rdx
+   163 00000137 4889C7                          mov     rdi, rax
+   164 0000013A E8C1FEFFFF                      call    YearsDivideLetters
+   165 0000013F 39C3                            cmp     ebx, eax
+   166 00000141 7508                            jne     .third_Condition
+   167 00000143 8B45EC                          mov     eax, dword [rbp-20]
+   168 00000146 83C001                          add     eax, 1
+   169 00000149 EB67                            jmp     .return
+   170                                  .third_Condition:
+   171 0000014B 488B45D0                        mov     rax, qword [rbp-48]
+   172 0000014F 4889C7                          mov     rdi, rax
+   173 00000152 E8A9FEFFFF                      call    YearsDivideLetters
+   174 00000157 89C3                            mov     ebx, eax
+   175 00000159 8B0425[00000000]                mov     eax, dword [programminglanguageSize]
+   176 00000160 0FAF45EC                        imul    eax, dword [rbp-20]
+   177 00000164 4863D0                          movsx   rdx, eax
+   178 00000167 488B45D8                        mov     rax, qword [rbp-40]
+   179 0000016B 4801D0                          add     rax, rdx
+   180 0000016E 4889C7                          mov     rdi, rax
+   181 00000171 E88AFEFFFF                      call    YearsDivideLetters
+   182 00000176 39C3                            cmp     ebx, eax
+   183 00000178 7D1F                            jge     .return_low_mid_1
+   184 0000017A 8B45EC                          mov     eax, dword [rbp-20]
+   185 0000017D 8D7801                          lea     edi, [rax+1]
+   186 00000180 8B55C8                          mov     edx, dword [rbp-56]
+   187 00000183 488B75D0                        mov     rsi, qword [rbp-48]
+   188 00000187 488B45D8                        mov     rax, qword [rbp-40]
+   189 0000018B 89D1                            mov     ecx, edx
+   190 0000018D 89FA                            mov     edx, edi
+   191 0000018F 4889C7                          mov     rdi, rax
+   192 00000192 E8FEFEFFFF                      call    BinarySearch
+   193 00000197 EB19                            jmp     .return
+   194                                  .return_low_mid_1:
+   195 00000199 8B45EC                          mov     eax, dword [rbp-20]
+   196 0000019C 8D48FF                          lea     ecx, [rax-1]
+   197 0000019F 8B55CC                          mov     edx, dword [rbp-52]
+   198 000001A2 488B75D0                        mov     rsi, qword [rbp-48]
+   199 000001A6 488B45D8                        mov     rax, qword [rbp-40]
+   200 000001AA 4889C7                          mov     rdi, rax
+   201 000001AD E8E3FEFFFF                      call    BinarySearch
+   202                                  .return:
+   203 000001B2 488B5DF8                        mov     rbx, qword [rbp-8]
+   204 000001B6 C9                              leave
+   205 000001B7 C3                              ret
+   206                                  
+   207                                  global BinaryInsertion
+   208                                  BinaryInsertion:
+   209                                  section .text
+   210 000001B8 55                              push    rbp
+   211 000001B9 4889E5                          mov     rbp, rsp
+   212 000001BC 4883EC40                        sub     rsp, 64
+   213 000001C0 48897DC8                        mov     qword [rbp-56], rdi
+   214 000001C4 8975C4                          mov     dword [rbp-60], esi
+   215 000001C7 488D45D0                        lea     rax, [rbp-48]
+   216 000001CB 488945F0                        mov     qword [rbp-16], rax
+   217 000001CF C745FC01000000                  mov     dword [rbp-4], 1
+   218 000001D6 E9DD000000                      jmp     .L11
+   219                                  .L14:
+   220 000001DB 8B45FC                          mov     eax, dword [rbp-4]
+   221 000001DE 83E801                          sub     eax, 1
+   222 000001E1 8945F8                          mov     dword [rbp-8], eax
+   223 000001E4 8B0425[00000000]                mov     eax, [programminglanguageSize]
+   224 000001EB 4863D0                          movsx   rdx, eax
+   225 000001EE 8B0425[00000000]                mov     eax, [programminglanguageSize]
+   226 000001F5 0FAF45FC                        imul    eax, dword [rbp-4]
+   227 000001F9 4863C8                          movsx   rcx, eax
+   228 000001FC 488B45C8                        mov     rax, qword [rbp-56]
+   229 00000200 4801C1                          add     rcx, rax
+   230 00000203 488D45D0                        lea     rax, [rbp-48]
+   231 00000207 4889CE                          mov     rsi, rcx
+   232 0000020A 4889C7                          mov     rdi, rax
+   233 0000020D E8(00000000)                    call    memcpy
+   234 00000212 8B55F8                          mov     edx, dword [rbp-8]
+   235 00000215 488D75D0                        lea     rsi, [rbp-48]
+   236 00000219 488B45C8                        mov     rax, qword [rbp-56]
+   237 0000021D 89D1                            mov     ecx, edx
+   238 0000021F BA00000000                      mov     edx, 0
+   239 00000224 4889C7                          mov     rdi, rax
+   240 00000227 E869FEFFFF                      call    BinarySearch
+   241 0000022C 8945EC                          mov     dword [rbp-20], eax
+   242 0000022F EB48                            jmp     .L12
+   243                                  .L13:
+   244 00000231 8B0425[00000000]                mov     eax, [programminglanguageSize]
+   245 00000238 4898                            cdqe
+   246 0000023A 8B1425[00000000]                mov     edx, [programminglanguageSize]
+   247 00000241 0FAF55F8                        imul    edx, dword [rbp-8]
+   248 00000245 4863CA                          movsx   rcx, edx
+   249 00000248 488B55C8                        mov     rdx, qword [rbp-56]
+   250 0000024C 488D3411                        lea     rsi, [rcx+rdx]
+   251 00000250 8B55F8                          mov     edx, dword [rbp-8]
+   252 00000253 8D4A01                          lea     ecx, [rdx+1]
+   253 00000256 8B1425[00000000]                mov     edx, [programminglanguageSize]
+   254 0000025D 0FAFD1                          imul    edx, ecx
+   255 00000260 4863CA                          movsx   rcx, edx
+   256 00000263 488B55C8                        mov     rdx, qword [rbp-56]
+   257 00000267 4801D1                          add     rcx, rdx
+   258 0000026A 4889C2                          mov     rdx, rax
+   259 0000026D 4889CF                          mov     rdi, rcx
+   260 00000270 E8(00000000)                    call    memcpy
+   261 00000275 836DF801                        sub     dword [rbp-8], 1
+   262                                  .L12:
+   263 00000279 8B45F8                          mov     eax, dword [rbp-8]
+   264 0000027C 3B45EC                          cmp     eax, dword [rbp-20]
+   265 0000027F 7DB0                            jge     .L13
+   266 00000281 8B0425[00000000]                mov     eax, [programminglanguageSize]
+   267 00000288 4863D0                          movsx   rdx, eax
+   268 0000028B 8B45F8                          mov     eax, dword [rbp-8]
+   269 0000028E 8D4801                          lea     ecx, [rax+1]
+   270 00000291 8B0425[00000000]                mov     eax, [programminglanguageSize]
+   271 00000298 0FAFC1                          imul    eax, ecx
+   272 0000029B 4863C8                          movsx   rcx, eax
+   273 0000029E 488B45C8                        mov     rax, qword [rbp-56]
+   274 000002A2 4801C1                          add     rcx, rax
+   275 000002A5 488D45D0                        lea     rax, [rbp-48]
+   276 000002A9 4889C6                          mov     rsi, rax
+   277 000002AC 4889CF                          mov     rdi, rcx
+   278 000002AF E8(00000000)                    call    memcpy
+   279 000002B4 8345FC01                        add     dword [rbp-4], 1
+   280                                  .L11:
+   281 000002B8 8B45FC                          mov     eax, dword [rbp-4]
+   282 000002BB 3B45C4                          cmp     eax, dword [rbp-60]
+   283 000002BE 0F8C17FFFFFF                    jl      .L14
+   284 000002C4 90                              nop
+   285 000002C5 90                              nop
+   286 000002C6 C9                              leave
+   287 000002C7 C3                              ret

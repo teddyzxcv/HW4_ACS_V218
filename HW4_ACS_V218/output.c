@@ -89,41 +89,41 @@ double YearsDivideLetters(void *s);
 
 //------------------------------------------------------------------------------
 // Бинарный поиск контейнера по частное от деления года создания на количество символов в названии
-int BinarySearch(void *c, void *item, int low, int high)
-{
-    if (high <= low)
-    {
-        return (YearsDivideLetters(item) < YearsDivideLetters(c + low * programminglanguageSize)) ? (low + 1) : low;
-    }
-    int mid = (low + high) / 2;
-    if (YearsDivideLetters(item) == YearsDivideLetters(c + programminglanguageSize * mid))
-    {
-        return mid + 1;
-    }
-    if (YearsDivideLetters(item) < YearsDivideLetters(c + programminglanguageSize * mid))
-    {
-        return BinarySearch(c, item, mid + 1, high);
-    }
-    return BinarySearch(c, item, low, mid - 1);
-}
+int BinarySearch(void *c, void *item, int low, int high);
+// {
+//     if (high <= low)
+//     {
+//         return (YearsDivideLetters(item) < YearsDivideLetters(c + low * programminglanguageSize)) ? (low + 1) : low;
+//     }
+//     int mid = (low + high) / 2;
+//     if (YearsDivideLetters(item) == YearsDivideLetters(c + programminglanguageSize * mid))
+//     {
+//         return mid + 1;
+//     }
+//     if (YearsDivideLetters(item) < YearsDivideLetters(c + programminglanguageSize * mid))
+//     {
+//         return BinarySearch(c, item, mid + 1, high);
+//     }
+//     return BinarySearch(c, item, low, mid - 1);
+// }
 
-void BinaryInsertion(void *cont, int len)
-{
-    int i, loc, j;
-    unsigned char selected[programminglanguageSize];
-    void *start_selected = selected;
-    for (i = 1; i < len; ++i)
-    {
-        j = i - 1;
-        memcpy(selected, cont + programminglanguageSize * i, programminglanguageSize);
-        loc = BinarySearch(cont, selected, 0, j);
-        while (j >= loc)
-        {
-            //c->cont[j + 1] = c->cont[j];
-            memcpy(cont + programminglanguageSize * (j + 1), cont + programminglanguageSize * j, programminglanguageSize);
-            j--;
-        }
-        //c->cont[j + 1] = selected;
-        memcpy(cont + programminglanguageSize * (j + 1), selected, programminglanguageSize);
-    }
-}
+void BinaryInsertion(void *cont, int len);
+// {
+//     int i, loc, j;
+//     unsigned char selected[programminglanguageSize];
+//     void *start_selected = selected;
+//     for (i = 1; i < len; ++i)
+//     {
+//         j = i - 1;
+//         memcpy(selected, cont + programminglanguageSize * i, programminglanguageSize);
+//         loc = BinarySearch(cont, selected, 0, j);
+//         while (j >= loc)
+//         {
+//             //c->cont[j + 1] = c->cont[j];
+//             memcpy(cont + programminglanguageSize * (j + 1), cont + programminglanguageSize * j, programminglanguageSize);
+//             j--;
+//         }
+//         //c->cont[j + 1] = selected;
+//         memcpy(cont + programminglanguageSize * (j + 1), selected, programminglanguageSize);
+//     }
+// }
