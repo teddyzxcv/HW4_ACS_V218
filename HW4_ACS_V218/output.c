@@ -85,23 +85,7 @@ void OutContainer(void *c, int len, FILE *f)
     }
 }
 
-double YearsDivideLetters(void *s)
-{
-    int k = *((int *)s);
-    if (k == FUNCTIONAL)
-    {
-        return YearsDivideLettersFunctional(s + intSize);
-    }
-    else if (k == OBJECTORIENTED)
-    {
-        return YearsDivideLettersObjectOriented(s + intSize);
-    }
-    else if (k == PROCEDURAL)
-    {
-        return YearsDivideLettersProcedural(s + intSize);
-    }
-    return -1;
-}
+double YearsDivideLetters(void *s);
 
 //------------------------------------------------------------------------------
 // Бинарный поиск контейнера по частное от деления года создания на количество символов в названии

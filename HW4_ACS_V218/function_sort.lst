@@ -55,3 +55,88 @@
     55 00000045 F20F2AC0                    cvtsi2sd    xmm0, eax
     56                                  
     57 00000049 C9                      leave
+    58 0000004A C3                      ret
+    59                                  
+    60                                  ; int BinarySearch(void *c, void *item, int low, int high)
+    61                                  ; {
+    62                                  ;     if (high <= low)
+    63                                  ;     {
+    64                                  ;         return (YearsDivideLetters(item) < YearsDivideLetters(c + low * programminglanguageSize)) ? (low + 1) : low;
+    65                                  ;     }
+    66                                  ;     int mid = (low + high) / 2;
+    67                                  ;     if (YearsDivideLetters(item) == YearsDivideLetters(c + programminglanguageSize * mid))
+    68                                  ;     {
+    69                                  ;         return mid + 1;
+    70                                  ;     }
+    71                                  ;     if (YearsDivideLetters(item) < YearsDivideLetters(c + programminglanguageSize * mid))
+    72                                  ;     {
+    73                                  ;         return BinarySearch(c, item, mid + 1, high);
+    74                                  ;     }
+    75                                  ;     return BinarySearch(c, item, low, mid - 1);
+    76                                  ; }
+    77                                  
+    78                                  ; global BinarySearch
+    79                                  ; BinarySearch:
+    80                                  ; section .text
+    81                                  ; push rbp
+    82                                  ; mov rbp, rsp
+    83                                  
+    84                                  ;     ; В rdi адрес прямоугольника
+    85                                  ;     mov eax, [rdi+8]
+    86                                  ;     mov edx, 0
+    87                                  ;     mov ecx, 14
+    88                                  ;     div ecx
+    89                                  ;     cvtsi2sd    xmm0, eax
+    90                                  
+    91                                  ; leave
+    92                                  ; ret
+    93                                  
+    94                                  ; double YearsDivideLetters(void *s)
+    95                                  ; {
+    96                                  ;     int k = *((int *)s);
+    97                                  ;     if (k == FUNCTIONAL)
+    98                                  ;     {
+    99                                  ;         return YearsDivideLettersFunctional(s + intSize);
+   100                                  ;     }
+   101                                  ;     else if (k == OBJECTORIENTED)
+   102                                  ;     {
+   103                                  ;         return YearsDivideLettersObjectOriented(s + intSize);
+   104                                  ;     }
+   105                                  ;     else if (k == PROCEDURAL)
+   106                                  ;     {
+   107                                  ;         return YearsDivideLettersProcedural(s + intSize);
+   108                                  ;     }
+   109                                  ;     return -1;
+   110                                  ; }
+   111                                  
+   112                                  global YearsDivideLetters
+   113                                  YearsDivideLetters:
+   114                                  section .text
+   115 0000004B 55                      push rbp
+   116 0000004C 4889E5                  mov rbp, rsp
+   117                                  
+   118                                      ; В rdi адрес фигуры
+   119 0000004F 8B07                        mov eax, [rdi]
+   120 00000051 3B0425[00000000]            cmp eax, [FUNCTIONAL]
+   121 00000058 741A                        je .functionalDivide
+   122 0000005A 3B0425[00000000]            cmp eax, [OBJECTORIENTED]
+   123 00000061 741C                        je .objectDivide
+   124 00000063 3B0425[00000000]            cmp eax, [PROCEDURAL]
+   125 0000006A 741E                        je .procedurallDivide
+   126 0000006C 31C0                        xor eax, eax
+   127 0000006E F20F2AC0                    cvtsi2sd    xmm0, eax
+   128 00000072 EB1F                        jmp     .return
+   129                                  .functionalDivide:
+   130 00000074 4883C704                    add     rdi, 4
+   131 00000078 E883FFFFFF                  call    YearsDivideLettersFunctional
+   132 0000007D EB14                        jmp     .return
+   133                                  .objectDivide:
+   134 0000007F 4883C704                    add     rdi, 4
+   135 00000083 E891FFFFFF                  call    YearsDivideLettersObjectOriented
+   136 00000088 EB09                        jmp     .return
+   137                                  .procedurallDivide:
+   138 0000008A 4883C704                    add     rdi, 4
+   139 0000008E E89FFFFFFF                  call    YearsDivideLettersProcedural
+   140                                  .return:
+   141 00000093 C9                      leave
+   142 00000094 C3                      ret
