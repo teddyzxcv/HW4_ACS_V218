@@ -45,16 +45,6 @@ int main(int argc, char *argv[])
     // Количество элементов в массиве
     int len = 0;
 
-    printf("intSize = %d\n", intSize);
-    printf("functionalSize = %d\n", functionalSize);
-    printf("objectorientedSize = %d\n", objectorientedSize);
-    printf("proceduralSize = %d\n", proceduraltSize);
-    printf("programminglanguageSize = %d\n", programminglanguageSize);
-    printf("maxSize = %d\n", maxSize);
-    printf("FUNCTIONAL = %d\n", FUNCTIONAL);
-    printf("OBJECTORIENTED = %d\n", OBJECTORIENTED);
-    printf("PROCEDURAL = %d\n", PROCEDURAL);
-    printf("Size of container = %lu\n", sizeof(cont));
 
     // Собираем адреса файлов.
     char testPath[200], resPath1[200], resPath2[200];

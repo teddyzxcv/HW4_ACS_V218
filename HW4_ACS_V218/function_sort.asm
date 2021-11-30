@@ -215,8 +215,8 @@ section .text
         lea     rax, [rbp-48]
         mov     qword [rbp-16], rax
         mov     dword [rbp-4], 1
-        jmp     .L11
-.L14:
+        jmp     .for_end
+.for_start:
         mov     eax, dword [rbp-4]
         sub     eax, 1
         mov     dword [rbp-8], eax
@@ -239,8 +239,25 @@ section .text
         mov     rdi, rax
         call    BinarySearch
         mov     dword [rbp-20], eax
-        jmp     .L12
-.L13:
+        mov     eax, dword [rbp-8]
+        cmp     eax, dword [rbp-20]
+        jge     .mainLoop
+        mov     eax, [programminglanguageSize]
+        movsx   rdx, eax
+        mov     eax, dword [rbp-8]
+        lea     ecx, [rax+1]
+        mov     eax, [programminglanguageSize]
+        imul    eax, ecx
+        movsx   rcx, eax
+        mov     rax, qword [rbp-56]
+        add     rcx, rax
+        lea     rax, [rbp-48]
+        mov     rsi, rax
+        mov     rdi, rcx
+        call    memcpy
+        add     dword [rbp-4], 1
+        jmp     .for_end
+.mainLoop:
         mov     eax, [programminglanguageSize]
         cdqe
         mov     edx, [programminglanguageSize]
@@ -259,10 +276,9 @@ section .text
         mov     rdi, rcx
         call    memcpy
         sub     dword [rbp-8], 1
-.L12:
         mov     eax, dword [rbp-8]
         cmp     eax, dword [rbp-20]
-        jge     .L13
+        jge     .mainLoop
         mov     eax, [programminglanguageSize]
         movsx   rdx, eax
         mov     eax, dword [rbp-8]
@@ -277,11 +293,12 @@ section .text
         mov     rdi, rcx
         call    memcpy
         add     dword [rbp-4], 1
-.L11:
+        jmp     .for_end
+.for_end:
         mov     eax, dword [rbp-4]
         cmp     eax, dword [rbp-60]
-        jl      .L14
-        nop
-        nop
+        jl      .for_start
+        jmp     .return
+.return:
         leave
         ret
